@@ -137,16 +137,14 @@
                 </h3>
                 <image src="img/rays.png" class="img-responsive" alt="overview"><br>
                 <p class="text-justify">
-The rendering procedure used by neural radiance fields (NeRF) samples a scene with a single ray per pixel and may therefore produce renderings that are excessively blurred or aliased when training or testing images observe scene content at different resolutions. The straightforward solution of supersampling by rendering with multiple rays per pixel is impractical for NeRF, because rendering each ray requires querying a multilayer perceptron hundreds of times. Our solution, which we call "mip-NeRF" (à la "mipmap"), extends NeRF to represent the scene at a continuously-valued scale.
-By efficiently rendering anti-aliased conical frustums instead of rays, mip-NeRF reduces objectionable aliasing artifacts and significantly improves NeRF's ability to represent fine details, while also being 7% faster than NeRF and half the size.
-Compared to NeRF, mip-NeRF reduces average error rates by 17% on the dataset presented with NeRF and by 60% on a challenging multiscale variant of that dataset that we present. mip-NeRF is also able to match the accuracy of a brute-force supersampled NeRF on our multiscale dataset while being 22x faster.
+Considerable progress has been made in 2D image generation, but 3D content creation lags behind due to a lack of large-scale, high-quality 3D datasets. Current methods that leverage 2D diffusion models for 3D generation require overfitting for each generated object, making them unscalable. In this paper, we present Lift3D, a novel approach to generating diverse and creative 3D content in a scalable feedforward manner. We achieve this by adapting a foundational image diffusion model using a small-scale 3D dataset. Lift3D employs multi-view images to bridge the gap between 2D and 3D, allowing for the direct prediction of consistent, multi-view 3D representations from 2D diffusion models. We design an interactive diffusion scheme that is facilitated by jointly optimized latent Neural Radiance Fields (NeRF) to ensure that the multi-view generations are consistent. Additionally, we propose an alternating guidance sampling strategy that preserves the creativity of the foundational image diffusion model while maintaining multi-view consistency. Using Lift3D, we can successfully distill the 3D counterpart of what can be created by a 2D foundation model, thereby overcoming the 3D data barrier and enabling scalable and diverse 3D content creation.
                 </p>
             </div>
         </div>
 
 
-
-        <div class="row">
+<!-- comment the following lines -->
+<!--         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Video
@@ -289,19 +287,17 @@ Compared to NeRF, mip-NeRF reduces average error rates by 17% on the dataset pre
 }</textarea>
                 </div>
             </div>
-        </div>
+        </div> -->
+   
+     <!-- comment the following lines -->
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Acknowledgements
                 </h3>
-                <p class="text-justify">
-                We thank Janne Kontkanen and David Salesin for their comments on the text, Paul Debevec for constructive discussions, and Boyang Deng for JaxNeRF. 
-                    <br>
-                MT is funded by an NSF Graduate Fellowship.
-                    <br>
-                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                <p class="text-justify"> 
+                The website template was borrowed from <a href="https://jonbarron.info/mipnerf/">mip-nerf</a>.
                 </p>
             </div>
         </div>
